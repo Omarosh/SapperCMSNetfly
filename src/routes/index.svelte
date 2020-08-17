@@ -1,69 +1,69 @@
 <style>
-	h1,
-	figure,
-	p {
-		text-align: center;
-		margin: 0 auto;
-	}
+  h1,
+  figure,
+  p {
+    text-align: center;
+    margin: 0 auto;
+  }
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
+  h1 {
+    font-size: 2.8em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 0.5em 0;
+  }
 
-	figure {
-		margin: 0 0 1em 0;
-	}
+  figure {
+    margin: 0 0 1em 0;
+  }
 
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 auto 1em;
-	}
+  img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 1em;
+  }
 
-	p {
-		margin: 1em auto;
-	}
+  p {
+    margin: 1em auto;
+  }
 
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+  @media (min-width: 480px) {
+    h1 {
+      font-size: 4em;
+    }
+  }
 
-	@define-mixin colorBlue {
-		color: blue;
-	}
+  @define-mixin colorBlue {
+    color: blue;
+  }
 
-	.blue {
-		@mixin colorBlue;
-	}
+  .blue {
+    @mixin colorBlue;
+  }
 
-	.red {
-		@mixin colorRed;
-	}
+  .red {
+    @mixin colorRed;
+  }
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+  <title>Sapper project template</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Hello Sapper!</h1>
 
 <figure>
-	<img alt="Success Kid" src="successkid.jpg" />
-	<figcaption>Have fun with Sapper!</figcaption>
+  <img alt="Success Kid" src="successkid.jpg" />
+  <figcaption>Have fun with Sapper!</figcaption>
 </figure>
 
 <p>
-	<strong>
-		Try editing this file (src/routes/index.svelte) to test live reloading.
-	</strong>
+  <strong>
+    Try editing this file (src/routes/index.svelte) to test live reloading.
+  </strong>
 </p>
 
 <div>
-	<p class="red">This is colored in red</p>
-	<p class="blue">This is colored in blue</p>
+  <p class="red">This is colored in red</p>
+  <p class="blue">This is colored in blue</p>
 </div>
