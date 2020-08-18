@@ -1,18 +1,21 @@
-import posts from "./_posts.js";
+import getFaunaposts from "./_faunaposts.js";
 
-const contents = JSON.stringify(
-	posts.map((post) => {
-		return {
-			title: post.title,
-			slug: post.slug,
-		};
-	})
-);
+export async function get(req, res) {
+    const faunaposts = await getFaunaposts();
 
-export function get(req, res) {
-	res.writeHead(200, {
-		"Content-Type": "application/json",
-	});
+    const contents = JSON.stringify(
+        faunaposts.map((post) => {
+            console.log(post);
+            return {
+                title: post.title,
+                slug: post.slug,
+            };
+        })
+    );
 
-	res.end(contents);
+    res.writeHead(200, {
+        "Content-Type": "application/json",
+    });
+
+    res.end(contents);
 }
